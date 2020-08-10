@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>using cookies</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container bg-secondary text-dark" style="height: 100vh">
+
+      <div class="row">
+        <div class="col text-center">
+          
+          <div id="city" class="input-group mt-3 mb-5" style="width: 40vw; display: flex;">
+            <label for="city">Ваш город: </label>
+            <input type="text" class="form-control ml-3" name="city" value="" placeholder="Введите город проживания..." aria-label="Ваш город" aria-describedby="basic-addon2">
+          </div>
+
+          <div id="saved_city" class="input-group mt-3 mb-3" style="width: 40vw; display: none; font-size: 20px; font-weight: bold;">
+            <p>Ваш город:</p>
+            <div class="ml-3">
+              <p>Варшава</p>
+            </div>
+            <button id="change_city" class="btn btn-primary ml-3" type="button">Изменить</button>
+          </div>
+
+          <h2>Проставьте необходимые галочки</h2>
+          
+          <div class="row mt-3">
+            <div class="col-2"></div>
+            
+            <div class="col-9 text-left">
+              
+              <form style="font-size: 20px">
+                <div class="form-check">
+                  <input class="form-check-input" style="transform:scale(1.5)" type="checkbox" id="check1">
+                  <label class="form-check-label" for="check1">
+                    не звонить мне;
+                  </label>
+                </div>
+                <div class="form-check mt-3">
+                  <input class="form-check-input" style="transform:scale(1.5)" type="checkbox" id="check2">
+                  <label class="form-check-label align-top" for="check2">
+                    я прочитал и согласен с правилами пользования сервисом;
+                  </label>
+                </div>
+                <div class="form-check mt-3">
+                  <input class="form-check-input" style="transform:scale(1.5)" type="checkbox" id="check3">
+                  <label class="form-check-label" for="check3">
+                    я не выбираю эту галочку;
+                  </label>
+                </div>
+                <div class="form-check mt-3">
+                  <input class="form-check-input" style="transform:scale(1.5)" type="checkbox" id="check4">
+                  <label class="form-check-label" for="check4">
+                    я подтверждаю, что свобода в интернете — это возможность выбирать галочки;
+                  </label>
+                </div>
+                <div class="form-check mt-3">
+                  <input class="form-check-input" style="transform:scale(1.5)" type="checkbox" id="check5">
+                  <label class="form-check-label" for="check5">
+                    мне больше 12 лет;
+                  </label>
+                </div>
+                <div class="form-check mt-3">
+                  <input class="form-check-input" style="transform:scale(1.5)" type="checkbox" id="check6">
+                  <label class="form-check-label" for="check6">
+                    это задание выполнено правильно;
+                  </label>
+                </div>
+              </form>
+
+            </div>
+            
+          </div>
+          
+          <div class="mt-5">
+            <button id="save_changes" type="button" class="btn btn-primary btn-lg">Запомнить информацию</button>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+   <script src="./js/cookies.js"></script>
+  </body>
+</html>
+
+
