@@ -15,25 +15,8 @@ let boxesStatus = '';
 let userCity = '';
 
 // записывает куки
-function setCookie(name, value, options = {}) {
-  options = {
-    path: '/',
-    expires: '',
-  };
-
-  if (options.expires.toUTCString) {
-    options.expires = options.expires.toUTCString();
-  }
-
-  let updatedCookie = encodeURIComponent(name) + "=" + encodeURIComponent(value);
-
-  for (let optionKey in options) {
-    updatedCookie += "; " + optionKey;
-    let optionValue = options[optionKey];
-    if (optionValue !== true) {
-      updatedCookie += "=" + optionValue;
-    }
-  }
+function setCookie(name, value, max_age) {
+  let updatedCookie = encodeURIComponent(name) + "=" + encodeURIComponent(value) + "; max-age=" + max_age;
   document.cookie = updatedCookie;
 }
 
@@ -75,13 +58,13 @@ function setBoxesStatus () {
 // обрабатываем клик по кнопке "Запомнить информацию"
 btnSaveChanges.addEventListener('click', () => {
   // записываем куку с названием города, который введен пользователем
-  setCookie('userCity', inputCity.value, {'max-age': 30});
+  setCookie('userCity', inputCity.value, 30);
   
   // готовим информцию о состоянии чекбоксов и записываем
   // соответствующую куку
   boxesStatus = '';
   boxes.forEach(saveBoxesStatus);
-  setCookie('boxesStatus', boxesStatus, {'max-age': 30});
+  setCookie('boxesStatus', boxesStatus, 30);
   
   alert('Все изменения сохранены! Можете перезагрузить страницу или браузер');
 });
