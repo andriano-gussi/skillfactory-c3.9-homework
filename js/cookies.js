@@ -56,13 +56,13 @@ function setBoxesStatus () {
 // обрабатываем клик по кнопке "Запомнить информацию"
 btnSaveChanges.addEventListener('click', () => {
   // записываем куку с названием города, который введен пользователем
-  setCookie('userCity', inputCity.value, 60);
+  setCookie('userCity', inputCity.value, 600);
   
   // готовим информцию о состоянии чекбоксов и записываем
   // соответствующую куку
   boxesStatus = '';
   boxes.forEach(saveBoxesStatus);
-  setCookie('boxesStatus', boxesStatus, 60);
+  setCookie('boxesStatus', boxesStatus, 600);
   
   alert('Все изменения сохранены! Можете перезагрузить страницу или браузер');
 });
