@@ -81,6 +81,7 @@ btnChangeCity.addEventListener('click', () => {
 // при нажатии на которую можно будет изменить город и отметить чекбоксы
 function init() {
   userCity = getCookie('userCity');
+  alert(userCity);
   if (userCity) {
     divCity.style.display = 'none';
     h2.style.display = 'none';
