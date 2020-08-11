@@ -79,6 +79,7 @@ btnSaveChanges.addEventListener('click', () => {
   
   // готовим информцию о состоянии чекбоксов и записываем
   // соответствующую куку
+  boxesStatus = '';
   boxes.forEach(saveBoxesStatus);
   setCookie('boxesStatus', boxesStatus, {'max-age': 600});
   
@@ -99,12 +100,12 @@ btnChangeCity.addEventListener('click', () => {
 // при нажатии на которую можно будет изменить город и отметить чекбоксы
 function init() {
   userCity = getCookie('userCity');
-  boxesStatus = getCookie('boxesStatus');
   if (userCity) {
     divCity.style.display = 'none';
     h2.style.display = 'none';
     btnSaveChanges.style.display = 'none';
     userCityName.innerText = userCity;
+    boxesStatus = getCookie('boxesStatus');
     setBoxesStatus();
     boxes.forEach(setBoxesDisabled);
     divSavedCity.style.display = 'flex';
