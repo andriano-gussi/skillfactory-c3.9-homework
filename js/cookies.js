@@ -17,9 +17,9 @@ let userCity = '';
 // записывает куки
 function setCookie(name, value, max_age) {
   let updatedCookie = encodeURIComponent(name) + "=" + encodeURIComponent(value) + "; max-age=" + max_age;
-  console.log(updatedCookie);
+  alert(updatedCookie);
   document.cookie = updatedCookie;
-  console.log(document.cookie);
+  alert(document.cookie);
 }
 
 // возвращает значение куки с указанным именем (name)
