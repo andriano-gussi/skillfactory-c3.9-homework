@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./css/bootstrap.min.css">
   </head>
   <body>
-    <div class="container bg-secondary text-dark" style="height: 100vh">
+    <div class="container bg-info text-dark" style="height: 100vh">
 
       <div class="row">
         <div class="col text-center">
@@ -17,10 +17,9 @@
             <input type="text" class="form-control ml-3" name="city" value="" placeholder="Введите город проживания..." aria-label="Ваш город" aria-describedby="basic-addon2">
           </div>
 
-          <div id="saved_city" class="input-group mt-3 mb-3" style="width: 40vw; display: none; font-size: 20px; font-weight: bold;">
+          <div id="saved_city" class="input-group mt-5 mb-5" style="width: 40vw; display: none; font-size: 20px">
             <p>Ваш город:</p>
-            <div class="ml-3">
-              <p>Варшава</p>
+            <div id="user_city" class="ml-3 text-muted">
             </div>
             <button id="change_city" class="btn btn-primary ml-3" type="button">Изменить</button>
           </div>
@@ -34,37 +33,37 @@
               
               <form style="font-size: 20px">
                 <div class="form-check">
-                  <input class="form-check-input" style="transform:scale(1.5)" type="checkbox" id="check1">
+                  <input class="form-check-input" style="transform:scale(1.5)" type="checkbox">
                   <label class="form-check-label" for="check1">
                     не звонить мне;
                   </label>
                 </div>
                 <div class="form-check mt-3">
-                  <input class="form-check-input" style="transform:scale(1.5)" type="checkbox" id="check2">
+                  <input class="form-check-input" style="transform:scale(1.5)" type="checkbox">
                   <label class="form-check-label align-top" for="check2">
                     я прочитал и согласен с правилами пользования сервисом;
                   </label>
                 </div>
                 <div class="form-check mt-3">
-                  <input class="form-check-input" style="transform:scale(1.5)" type="checkbox" id="check3">
+                  <input class="form-check-input" style="transform:scale(1.5)" type="checkbox">
                   <label class="form-check-label" for="check3">
                     я не выбираю эту галочку;
                   </label>
                 </div>
                 <div class="form-check mt-3">
-                  <input class="form-check-input" style="transform:scale(1.5)" type="checkbox" id="check4">
+                  <input class="form-check-input" style="transform:scale(1.5)" type="checkbox">
                   <label class="form-check-label" for="check4">
                     я подтверждаю, что свобода в интернете — это возможность выбирать галочки;
                   </label>
                 </div>
                 <div class="form-check mt-3">
-                  <input class="form-check-input" style="transform:scale(1.5)" type="checkbox" id="check5">
+                  <input class="form-check-input" style="transform:scale(1.5)" type="checkbox">
                   <label class="form-check-label" for="check5">
                     мне больше 12 лет;
                   </label>
                 </div>
                 <div class="form-check mt-3">
-                  <input class="form-check-input" style="transform:scale(1.5)" type="checkbox" id="check6">
+                  <input class="form-check-input" style="transform:scale(1.5)" type="checkbox">
                   <label class="form-check-label" for="check6">
                     это задание выполнено правильно;
                   </label>
