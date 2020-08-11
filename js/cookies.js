@@ -17,7 +17,6 @@ let userCity = '';
 // записывает куки
 function setCookie(name, value, max_age) {
   let updatedCookie = '"' + encodeURIComponent(name) + '=' + encodeURIComponent(value) + '; max-age=' + String(max_age) + '"';
-  alert(updatedCookie);
   document.cookie = updatedCookie;
 }
 
@@ -31,9 +30,7 @@ function getCookie(name) {
 
 // удаляет куку с именем name
 function deleteCookie(name) {
-  setCookie(name, "", {
-    'max-age': -1
-  })
+  setCookie(name, "", -1)
 }
 
 // устанавливае все чекбоксы в неактивное состояние
